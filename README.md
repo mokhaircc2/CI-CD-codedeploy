@@ -1,4 +1,4 @@
-# CI/CD using GitHub and AWS CodeDeploy*
+# CI/CD using GitHub and AWS CodeDeploy
 
 
 <b>User Data for Dependencies installations for AMAZON Linux 2:-</b>
@@ -19,15 +19,17 @@ In this project I created a multi-environment pipeline to deploy applications to
 
 Launch 2 instances (Amazon Linux2, t2.micro), name them Dev and Prod and attach instance profile (role for CodeDeploy) to EC2. On the User data script configure the installation of Apache and CodeDeploy agent:
 
-#!/bin/bash/
+#!/bin/bash<br />
 
-#install Apache
-yum update -y yum<br />
-install httpd -y<br />
+#install Apache<br />
+yum update -y<br />
+yum install httpd -y<br />
 systemctl start httpd<br />
 systemctl enable httpd<br />
 
-#install CodeDeploy agent yum install ruby -y yum install wget -y<br />
+#install CodeDeploy agent<br />
+yum install ruby -y<br />
+yum install wget -y<br />
 
 #wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install, bucket-name is the name of the Amazon S3 bucket that contains the CodeDeploy Resource Kit files for your region, and region-identifier is the identifier for your region. For a list of bucket names and region identifiers see Resource kit bucket names by Region on the AWS documentation.<br />
 
