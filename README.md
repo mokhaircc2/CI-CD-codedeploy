@@ -1,6 +1,4 @@
-# CI-CD-codedeploy
-
-*CI/CD using GitHub and AWS CodeDeploy**
+# CI-CD-codedeploy *CI/CD using GitHub and AWS CodeDeploy**
 
 In this project I created a multi-environment pipeline to deploy applications to a Dev and Prod environment using EC2 instances, CodeDeploy, CodePipeline and GitHub. I will be using Visual Studio Code to push any updates locally to our remote repository.
 
@@ -53,3 +51,4 @@ yum install ruby -y
 wget https://aws-codedeploy-eu-west-1.s3.eu-west-1.amazonaws.com/latest/install
 chmod +x ./install
 ./install auto
+
