@@ -1,23 +1,19 @@
-# CI-CD-codedeploy CI/CD using GitHub and AWS CodeDeploy*
+# CI/CD using GitHub and AWS CodeDeploy*
 
 
 <b>User Data for Dependencies installations for AMAZON Linux 2:-</b>
 
 #!/bin/bash<br />
 
-yum update -y yum<br />
-install httpd -y<br />
+yum update -y<br />
+yum install httpd -y<br />
 systemctl start httpd<br />
 systemctl enable httpd<br />
-sudo yum -y install ruby<br />
-sudo yum -y install wget<br />
-cd /home/ec2-user<br />
+yum install ruby -y<br />
+yum install wget -y<br />
 wget  https://aws-codedeploy-eu-west-1.s3.eu-west-1.amazonaws.com/latest/install<br />
-sudo chmod +x ./install<br />
-sudo ./install auto<br />
-sudo yum install -y python-pip<br />
-sudo pip install awscli<br />
-
+chmod +x ./install<br />
+./install auto<br />
 
 In this project I created a multi-environment pipeline to deploy applications to a Dev and Prod environment using EC2 instances, CodeDeploy, CodePipeline and GitHub. I will be using Visual Studio Code to push any updates locally to our remote repository.
 
