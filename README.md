@@ -6,6 +6,7 @@ Launch 2 instances (Amazon Linux2, t2.micro), name them Dev and Prod and attach 
 
 UserData script
 <b>User Data for Dependencies installations for AMAZON Linux 2:-</b>
+
 #!/bin/bash<br />
 
 #install Apache<br />
